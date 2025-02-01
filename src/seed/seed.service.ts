@@ -87,7 +87,7 @@ export class SeedService implements OnModuleInit {
           },
         ]);
       } catch (error) {
-        console.log('error seeding user');
+        console.log('Error seeding user data');
       }
 
       try {
@@ -279,62 +279,14 @@ export class SeedService implements OnModuleInit {
                 seasonNumber: 1,
                 title: 'The Blind Banker',
                 releaseDate: '2010-08-01T00:00:00Z',
-                director: 'Euros Lyn',
+                director: 'Paul McGuigan',
                 actors: ['Benedict Cumberbatch', 'Martin Freeman'],
-              },
-            ],
-          },
-          {
-            title: 'The Crown',
-            description:
-              "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
-            genres: ['Biography', 'Drama', 'History'],
-            episodes: [
-              {
-                episodeNumber: 1,
-                seasonNumber: 1,
-                title: 'Wolferton Splash',
-                releaseDate: '2016-11-04T00:00:00Z',
-                director: 'Stephen Daldry',
-                actors: ['Claire Foy', 'Matt Smith'],
-              },
-              {
-                episodeNumber: 2,
-                seasonNumber: 1,
-                title: 'Hyde Park Corner',
-                releaseDate: '2016-11-04T00:00:00Z',
-                director: 'Philip Martin',
-                actors: ['Claire Foy', 'Matt Smith'],
-              },
-            ],
-          },
-          {
-            title: 'The Big Bang Theory',
-            description:
-              'A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the lab.',
-            genres: ['Comedy', 'Romance'],
-            episodes: [
-              {
-                episodeNumber: 1,
-                seasonNumber: 1,
-                title: 'Pilot',
-                releaseDate: '2007-09-24T00:00:00Z',
-                director: 'James Burrows',
-                actors: ['Johnny Galecki', 'Jim Parsons'],
-              },
-              {
-                episodeNumber: 2,
-                seasonNumber: 1,
-                title: 'The Big Bran Hypothesis',
-                releaseDate: '2007-10-01T00:00:00Z',
-                director: 'Mark Cendrowski',
-                actors: ['Johnny Galecki', 'Jim Parsons'],
               },
             ],
           },
         ]);
       } catch (error) {
-        console.error('Error in seeding tv shows');
+        console.log('Error seeding TV shows');
       }
 
       try {
@@ -343,104 +295,82 @@ export class SeedService implements OnModuleInit {
             title: 'Inception',
             description:
               'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.',
-            genres: ['Action', 'SciFi'],
+            genres: ['Action', 'Adventure', 'Sci-Fi'],
             releaseDate: '2010-07-16T00:00:00Z',
             director: 'Christopher Nolan',
-            actors: [
-              'Leonardo DiCaprio',
-              'Joseph Gordon-Levitt',
-              'Elliot Page',
-            ],
+            actors: ['Leonardo DiCaprio', 'Joseph Gordon-Levitt'],
           },
           {
-            title: 'The Godfather',
+            title: 'Titanic',
             description:
-              'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.',
-            genres: ['Drama', 'Crime'],
-            releaseDate: '1972-03-24T00:00:00Z',
-            director: 'Francis Ford Coppola',
-            actors: ['Marlon Brando', 'Al Pacino', 'James Caan'],
-          },
-          {
-            title: 'The Dark Knight',
-            description:
-              'When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.',
-            genres: ['Action', 'Drama'],
-            releaseDate: '2008-07-18T00:00:00Z',
-            director: 'Christopher Nolan',
-            actors: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
-          },
-          {
-            title: 'Pulp Fiction',
-            description:
-              'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',
-            genres: ['Drama', 'Crime'],
-            releaseDate: '1994-10-14T00:00:00Z',
-            director: 'Quentin Tarantino',
-            actors: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson'],
-          },
-          {
-            title: 'The Shawshank Redemption',
-            description:
-              'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.',
-            genres: ['Drama'],
-            releaseDate: '1994-09-22T00:00:00Z',
-            director: 'Frank Darabont',
-            actors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
-          },
-          {
-            title: 'Forrest Gump',
-            description:
-              'The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.',
+              'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.',
             genres: ['Drama', 'Romance'],
-            releaseDate: '1994-07-06T00:00:00Z',
-            director: 'Robert Zemeckis',
-            actors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise'],
+            releaseDate: '1997-12-19T00:00:00Z',
+            director: 'James Cameron',
+            actors: ['Leonardo DiCaprio', 'Kate Winslet'],
           },
           {
             title: 'The Matrix',
             description:
               'A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.',
-            genres: ['Action', 'SciFi'],
+            genres: ['Action', 'Sci-Fi'],
             releaseDate: '1999-03-31T00:00:00Z',
-            director: 'Lana Wachowski, Lilly Wachowski',
-            actors: ['Keanu Reeves', 'Laurence Fishburne', 'Carrie-Anne Moss'],
+            director: 'The Wachowskis',
+            actors: ['Keanu Reeves', 'Laurence Fishburne'],
           },
           {
-            title: 'Fight Club',
+            title: 'The Dark Knight',
             description:
-              'An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.',
-            genres: ['Drama'],
-            releaseDate: '1999-10-15T00:00:00Z',
-            director: 'David Fincher',
-            actors: ['Brad Pitt', 'Edward Norton', 'Meat Loaf'],
-          },
-          {
-            title: 'The Lord of the Rings: The Fellowship of the Ring',
-            description:
-              'A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.',
-            genres: ['Action', 'Adventure', 'Drama'],
-            releaseDate: '2001-12-19T00:00:00Z',
-            director: 'Peter Jackson',
-            actors: ['Elijah Wood', 'Ian McKellen', 'Orlando Bloom'],
+              'When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.',
+            genres: ['Action', 'Crime', 'Drama'],
+            releaseDate: '2008-07-18T00:00:00Z',
+            director: 'Christopher Nolan',
+            actors: ['Christian Bale', 'Heath Ledger'],
           },
           {
             title: 'The Lion King',
             description:
-              'Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.',
+              'A young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.',
             genres: ['Animation', 'Adventure', 'Drama'],
-            releaseDate: '1994-06-24T00:00:00Z',
-            director: 'Roger Allers, Rob Minkoff',
-            actors: ['Matthew Broderick', 'Jeremy Irons', 'James Earl Jones'],
+            releaseDate: '1994-06-15T00:00:00Z',
+            director: 'Roger Allers',
+            actors: ['Matthew Broderick', 'Jeremy Irons'],
+          },
+          {
+            title: 'The Avengers',
+            description:
+              'Earth\'s mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from subjugating the Earth.',
+            genres: ['Action', 'Adventure', 'Sci-Fi'],
+            releaseDate: '2012-05-04T00:00:00Z',
+            director: 'Joss Whedon',
+            actors: ['Robert Downey Jr.', 'Chris Evans'],
+          },
+          {
+            title: 'Avatar',
+            description:
+              'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
+            genres: ['Action', 'Adventure', 'Fantasy'],
+            releaseDate: '2009-12-18T00:00:00Z',
+            director: 'James Cameron',
+            actors: ['Sam Worthington', 'Zoe Saldana'],
+          },
+          {
+            title: 'Jurassic Park',
+            description:
+              'During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.',
+            genres: ['Adventure', 'Sci-Fi', 'Thriller'],
+            releaseDate: '1993-06-11T00:00:00Z',
+            director: 'Steven Spielberg',
+            actors: ['Sam Neill', 'Laura Dern'],
           },
         ]);
       } catch (error) {
-        console.error('error seeding movies', error);
+        console.log('Error seeding movie data');
       }
 
-      this.logger.log('Database seeded successfully');
+      this.logger.log('Database seeding completed.');
     } catch (error) {
-      this.logger.error('Error seeding database:', error);
+      this.logger.error('Error seeding the database', error.stack);
     }
   }
 }

@@ -14,3 +14,5 @@ export const genre = [
   'Biography',
   'History',
 ];
+
+export const ContentType = ['Movie', 'TVShow'];
