@@ -1,39 +1,18 @@
-# Use the official Node.js 16 image
-FROM node:16 as build
+# Use Node.js official image
+FROM node:18-alpine
 
-# Set the working directory inside the container
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# Copy package.json and install dependencies
 COPY package*.json ./
-
-# Install NestJS dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Copy project files
 COPY . .
 
-# Install TypeScript globally
-RUN npm install -g typescript
-
-# Build the NestJS application
-RUN npm run build
-
-# Use a smaller Node.js image for the production build
-FROM node:16-alpine
-
-# Set the working directory inside the container
-WORKDIR /app
-
-# Copy the built application from the build image
-COPY --from=build /app/dist ./dist
-COPY package*.json ./
-
-# Install only production dependencies
-RUN npm install --production
-
-# Expose port 3000 for the NestJS application
+# Expose port
 EXPOSE 3000
 
-# Command to run the application in production
-CMD ["node", "dist/main"]
+# Start in watch mode
+CMD ["npm", "run", "start:dev"]

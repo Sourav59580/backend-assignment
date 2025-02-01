@@ -19,6 +19,10 @@ services:
       - '3000:3000'
     environment:
       MONGO_URL: mongodb://mongodb:27017/stagedb
+    volumes:
+      - .:/usr/src/app # Mount your local code inside the container
+      - /usr/src/app/node_modules # Prevent overwriting node_modules
+    command: npm run start:dev # Ensure the app runs in watch mode
 
 volumes:
   mongo-data:

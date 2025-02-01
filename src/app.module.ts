@@ -7,7 +7,7 @@ import { TvshowsModule } from './tvshows/tvshows.module';
   imports: [
     MongooseModule.forRoot('mongodb://mongodb:27017/stagedb'),
     MoviesModule,
-    TvshowsModule,
+    TvshowsModule
   ],
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
-import { IsNotEmpty, IsString, IsArray, ArrayMinSize } from 'class-validator';
+import { IsNotEmpty, IsString, IsArray, ArrayMinSize, IsIn } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { EpisodeDto } from './episode.dto';
+import { genre } from '../../constants/constants';
+
 export class CreateTVshowDto {
   @ApiProperty()
   @IsNotEmpty()
@@ -12,10 +14,11 @@ export class CreateTVshowDto {
   @IsString()
   description: string;
 
-  @ApiProperty({ type: [String] })
+  @ApiProperty({ type: [String], enum: genre })
   @IsNotEmpty()
   @IsArray()
   @ArrayMinSize(1)
+  @IsIn(genre, { each: true })
   genres: string[];
 
   @ApiProperty({ type: [EpisodeDto] })
